@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+        <!-- Inserindo símbolos especiais < &lsaquo e > &rsaquo -->
+    <title>Aula18 - tags &lsaquo;code&rsaquo; e &lsaquo;pre&rsaquo;</title>
+    <style>
+        pre{
+            border: 1px solid #000;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>O segmento de código a seguir representa o corpo básico de um programa em C.</p>
+
+    <!-- Inserindo códigos dentro da página -->
+    <pre>
+    <code>
+        #include &lsaquo;stdio.h&rsaquo;
+        #include &lsaquo;stdlib.h&rsaquo;
+        #include &lsaquo;locale.h&rsaquo;
+
+        int main(){
+            setLocale(LC_ALL, "Portuguese");
+            printf("Código básico em C");
+            sysyem("pause");
+        
+            return 0;
+        }
+    </code>
+    </pre>
+
+</body>
+</html>
