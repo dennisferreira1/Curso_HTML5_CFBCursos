@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula22 - tag &lsaquo;dialog&rsaquo;</title>
+    <script>
+        function abrir(){
+            document.getElementById("d1").setAttribute("open","true"); // Inerindo o atributo open da tag <dialog>
+        }
+        function fechar(){
+            document.getElementById("d1").removeAttribute("open"); // Removendo o atributo open da tag <dialog>
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="abrir()">Abrir</button>
+    <button onclick="fechar()">Fechar</button>
+
+    <!-- Inserindo caixa de diálogo na página -->
+    <dialog id="d1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aut asperiores repudiandae. Aliquid cumque dolor, alias itaque omnis nulla. Vel magni at atque asperiores quia velit est qui nisi eum.
+        </p>
+    </dialog>
+</body>
+</html>
