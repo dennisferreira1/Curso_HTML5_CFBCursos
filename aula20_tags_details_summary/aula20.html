@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula20 - tags &lsaquo;details&rsaquo; e &lsaquo;summary&rsaquo;</title>
+    <style>
+        summary{
+            cursor: pointer;
+        }
+        summary::-webkit-details-marker{
+            color:blue;
+        }
+        details[open] summary::-webkit-details-marker{
+            color: chartreuse;
+        }
+        details article{
+            color: black;
+            background-color: #ddd;
+            border: 1px solid #000;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        details{
+            height: 600px;
+            text-align: center;
+            color: darkblue;
+            background-color: #999;
+            border: 1px solid #000;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Criando conteúdos que podem ser visualizados ou ocultados pelo usuário --> 
+    <details>
+        <summary>Cursos do CFB Cursos</summary>
+        <article>
+            <p>HTML 5</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>C++</p>
+            <p>PHP</p>
+            <p>QTCreator</p>
+        </article>
+        <article>
+            <p>HTML 5</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>C++</p>
+            <p>PHP</p>
+            <p>QTCreator</p>
+        </article>
+    </details>
+</body>
+</html>
