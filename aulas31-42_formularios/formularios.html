@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aulas31a42 - Formulários</title>
+    <style>
+        form{
+            border: 1px solid #000;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+        #btns{
+            display: flex;
+        }
+        .br{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Adicionando formulários na página -->
+    <form action="#" name="form_cadastro" method="GET" enctype="multipart/form-data">
+        <fieldset> <!-- Adicionando área para conjunto de campos -->
+            <legend>Dados 1</legend>
+            <!-- Inserindo caixa de texto -->
+            <label for="iNome">Nome</label>
+            <input class="br" type="text" name="txtNome" id="iNome" size="25" maxlength="20"> 
+            <!-- Inserindo campo de senha -->
+            <label for="iSenha">Senha</label>
+            <input class="br" type="password" name="txtSenha" id="iSenha" size="10" pattern="[a-zA-Z0-9]{8}" required> 
+        </fieldset>
+        
+        <fieldset>
+            <legend>Dados 2</legend>
+        
+            <!-- Inserindo checkbox -->
+            <label>Esportes favoritos:</label>
+            <input type="checkbox" name="chkboxFut" value="futebol" checked>Futebol
+            <input type="checkbox" name="chkboxBas" value="basket">Basket
+            <input type="checkbox" name="chkboxNat" value="natação">Natação
+            <!-- Inserindo radio button -->
+            <!-- Obs: Devem possuir o mesmo valor para o atributo "name" -->
+            <label class="br">Possui carro?</label>
+            <input type="radio" name="rbCarro" value="s">Sim 
+            <input type="radio" name="rbCarro" value="n">Não
+            <!-- Inserindo Números -->
+            <label class="br" for="iQtde">Quantos?</label>
+            <input type="number" name="nQtde" id="iQtde" min="0">
+            <!-- Inserindo Hora -->
+            <label class="br" for="iHora">Hora</label>
+            <input type="time" name="tHora" id="iHora">
+            <!-- Inserindo Data -->
+            <label class="br" for="iData">Data</label>
+            <input type="date" name="dData" id="iData">
+            <!-- Inserindo Data e Hora -->
+            <label class="br" for="iDataHora">Data</label>
+            <input type="datetime-local" name="dDataHora" id="iDataHora">
+            <!-- Inserindo campos para telefones -->
+            <label class="br" for="iTelefone">Telefone</label>
+            <input type="tel" name="txtTelefone" id="iTelefone" pattern="\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}" placeholder="(xx)9xxx-xxxx" required>
+            <!-- Inserindo campo para pesquisa -->
+            <label class="br" for="iPesquisa">Pesquisa</label>
+            <input type="search" name="txtPesquisa" id="iPesquisa">
+            <!-- Inserindo campo para anexar arquivo -->
+            <label class="br" for="iArquivo">Selecione um arquivo:</label>
+            <input type="file" name="fArquivo" id="iArquivo" accept=".jpg, .png" multiple>
+            <!-- Inserindo Caixa de Listagem -->
+            <label class="br" for="iEstado">Selecione o estado:</label>
+            <select name="s_estado" id="iEstado" multiple>
+                <optgroup label="Nordeste">
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="CE">Ceará</option>
+                    <option value="PB">Paraíba</option>
+                </optgroup>
+            </select>
+            <!-- Inserindo Caixa de Listagem que permite digitar na caixa e também mudança do conteúdo da lista -->
+            <label class="br" for="iCidades">Selecione a cidade:</label>
+            <input list="dlCidades" name="lCidades" id="iCidades">
+            <datalist id="dlCidades">
+                <option value="NAT">NATAL</option>
+                <option value="CM">CEARÁ-MIRIM</option>
+                <option value="EXT">EXTREMOZ</option>
+                <option value="PAR">PARNAMIRIM</option>
+            </datalist>
+
+        </fieldset>
+
+
+        <br><br>
+        <div id="btns">
+            <!-- Inserindo botões -->
+            <input type="submit" name="btnEnviar">
+            <input type="reset" name="btnLimpar" value="Limpar">
+            <input type="button" name="btnNada" value="Nada">
+        </div>
+    </form>
+    
+</body>
+</html>
