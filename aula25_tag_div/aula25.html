@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula25 - tag div</title>
+    <style>
+        body{ 
+            margin: 0px;
+        }
+        *{
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .main{
+            border: 1px dotted #f00;
+            margin: auto;
+            width: 960px;
+        }
+        #cabecalho, #corpo, #rodape{
+            border: 1px dotted #aaa;
+        }
+        #cabecalho{
+            position: absolute;
+            top: 0px;
+            left: 0px ;
+            width: 100%;
+            height: 200px;
+
+        }
+        #corpo{
+            position: absolute;
+            top: 200px;
+            left: 0px;
+            width: 100%;
+            height: 470px;
+        }
+        #caixa1, #caixa2, #caixa3{
+            width: 150px;
+            height: 200px;
+        }
+        #caixa1{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #f00;
+            color: #fff;
+            border: 1px solid #000;
+        }
+        #caixa2{
+            position: relative;
+            top: 0px;
+            left: 0px;
+            background-color: #0f0;
+            color: #fff;
+            border: 1px solid #000;
+        }
+        #caixa3{
+            position: fixed;
+            top: 0px;
+            left: 1200px;
+            background-color: #00f;
+            color: #fff;
+            border: 1px solid #000;
+        }
+        #rodape{
+            position: absolute;
+            top: 670px;
+            left: 0px;
+            width: 100%;
+            height: 90px;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+   
+        <div id="cabecalho">
+            <div class="main">
+                <h1>CFB Cursos</h1>
+                <p>O CfB Cursos é um canal de cursos de informática com cursos inteiramente grátis.</p>
+                <h2>Cursos do canal</h2>
+            </div>  
+        </div>
+
+        <div id="corpo">
+            <div class="main">
+                <div id="caixa1">
+                    <h3>HTML</h3>
+                    <p>Existem três playlists de HTML atualmente no canal.</p>
+                    <a href="">Confira</a>
+                </div>
+
+                <div id="caixa2">
+                    <h3>C++ / QtCreator</h3>
+                    <p>Embora sejam playlists separadas, esses cursos formam uma dupla, você primeiro aprende a programar na linguagem c++ e depois...</p>
+                    <a href="#">Confira</a>
+                </div>
+
+                <div id="caixa3">
+                    <h3>Arduíno</h3>
+                    <p>Neste curso você vai aprender a controlar dispositivos de hardware como sensores e motores</p>
+                    <a href="#">Confira</a>
+                </div>
+            </div>
+         </div>
+
+         <div id="rodape">
+            <div class="main">
+                <p>www.youtube.com/cfbcursos</p>
+                <p>cfbcursos.com</p>
+
+            </div>
+         </div>
+    
+</body>
+</html>
